@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>로그인</title>
+</head>
+<body>
+<h2>로그인</h2>
+<script>
+    function urlEncoding(){
+        var urlParam = "http://localhost:8080/callback";
+        var url = "http://localhost:9000/login-request?client_id=spacein&scope=ABC&redirect_uri=" + encodeURIComponent(urlParam);
+        document.getElementById("myForm").action = url;
+        document.getElementById("myForm").submit();
+    }
+</script>
+
+<form id="myForm" method="post">
+    <input type="button" value="DADAUM으로 로그인" onclick="urlEncoding()">
+</form>
+
+</body>
+</html>
