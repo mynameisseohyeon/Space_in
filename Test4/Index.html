@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SpaceInWYSIWYG</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <script src="./summernote=lite.js"</script>
+    <script src="./summernote-ko-KR.js"</script>
+    <link rel="stylesheet" href="./summernote-lite.css">
+
+  </head>
+  <body>
+      <h1>SPACE - IN</h1>
+      <input type="button" name="Add" value="Add Post">
+      <input type="button" name="Can" value="Cancel">
+      <div id="summernote"></div>
+      <script>
+          $('#summernote').summernote({
+          placeholder: 'Text',
+          tabsize: 2,
+          height: 400,
+          lang:"ko-KR",
+          toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+          ]
+          });
+      </script>
+  </body>
+</html>
