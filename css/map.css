@@ -8,7 +8,7 @@ body {
   width: 1100px;
   margin: 0 auto;
   position: relative;
-  height: 1920px;
+  height: 1080px;
   display: flex;
 }
 
@@ -16,7 +16,6 @@ body {
   width: 30%;
   height: auto; /* 높이를 자동으로 조정 */
   padding: 100px 10px;
-
   background-color: #495b73;
 }
 
@@ -44,15 +43,16 @@ body {
 .map_page {
   width: 80%;
   height: auto; /* 높이를 자동으로 조정 */
-  padding: 100px 10px;
+  padding: 200px 10px;
 }
 
 .kakao_map {
-  width: 80%;
-  height: 30%;
+  width: 85%;
+  height: 70%;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #a6a6a6;
+  margin-bottom: 30px;
 }
 
 .move_btn {
