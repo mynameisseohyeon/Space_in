@@ -1,188 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>space-in</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
-    .btn-search {
-      background-color: white;
-    }
+  <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>space-in</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      .btn-search {
+        background-color: white;
+      }
 
-    body{
-      background-color: #ffffff; /* 전체 배경색 설정 */
-    }
+      body {
+        background-color: #ffffff; /* 전체 배경색 설정 */
+      }
 
-    .nav-block {
-      padding: 10px;
-      background-color: #ffffff; /* 상단바 배경색 */
-      margin-top: 10px; /* 살짝 띄우는 마진값 설정 */
-    }
+      .nav-block {
+        padding: 10px;
+        background-color: #ffffff; /* 상단바 배경색 */
+        margin-top: 10px; /* 살짝 띄우는 마진값 설정 */
+      }
 
-    .nav-block a {
-      color: #333;
-      text-decoration: none;
-    }
+      .nav-block a {
+        color: #333;
+        text-decoration: none;
+      }
 
-    .nav-block.active {
-      background-color: #495b73; /* 파란색 */
-    }
+      .nav-block.active {
+        background-color: #495b73; /* 파란색 */
+      }
 
-    .nav-block.active a {
-      color: white;
-    }
+      .nav-block.active a {
+        color: white;
+      }
 
-    .notice-table .notice-row {
-      background-color: #f8efee; /* 공지사항 기존 배경색 */
-    }
+      .notice-table .notice-row {
+        background-color: #f8efee; /* 공지사항 기존 배경색 */
+      }
 
-    .notice-table .notice-row:hover {
-      background-color: #ffc107; /* 공지사항 마우스 호버 시 적용될 배경색 */
-    }
+      .notice-table .notice-row:hover {
+        background-color: #ffc107; /* 공지사항 마우스 호버 시 적용될 배경색 */
+      }
 
-    .logo-container {       /* 상단 로고 */
-      display: flex;
-      align-items: center;
-      margin: 5px 10px;
-      /* margin-right: 10px;
+      .logo-container {
+        /* 상단 로고 */
+        display: flex;
+        align-items: center;
+        margin: 5px 10px;
+        /* margin-right: 10px;
       margin-left: 10px; */
-    }
+      }
 
-    .logo-text {           /* 상단 로고 */
-      font-size: 2em;
-      font-weight: bold;
-      font-family: "Arial", sans-serif;
-    }
+      .logo-text {
+        /* 상단 로고 */
+        font-size: 2em;
+        font-weight: bold;
+        font-family: "Arial", sans-serif;
+      }
 
-    .btn-main {     /* 메인 버튼 */
-      background-color: #ffffff;
-      transition: background-color 0.3s ease;
-      border: none;
-      padding: 8px 12px; /* 버튼의 패딩값 조정 */
-      font-size: 15px; /* 버튼의 글꼴 크기 조정 */
-      font-weight: bold; /* 폰트를 굵게 설정 */
-      margin-left: -10px; /* 원하는 만큼의 왼쪽 마진 설정 */
-    }
-    .btn-board {     /* 게시판 버튼 */
-      background-color: #ffffff;
-      transition: background-color 0.3s ease;
-      border: none;
-      padding: 8px 12px; /* 버튼의 패딩값 조정 */
-      font-size: 15px; /* 버튼의 글꼴 크기 조정 */
-      font-weight: bold; /* 폰트를 굵게 설정 */
-      margin-left: -4px; /* 원하는 만큼의 왼쪽 마진 설정 */
-    }
+      .btn-main {
+        /* 메인 버튼 */
+        background-color: #ffffff;
+        transition: background-color 0.3s ease;
+        border: none;
+        padding: 8px 12px; /* 버튼의 패딩값 조정 */
+        font-size: 15px; /* 버튼의 글꼴 크기 조정 */
+        font-weight: bold; /* 폰트를 굵게 설정 */
+        margin-left: -10px; /* 원하는 만큼의 왼쪽 마진 설정 */
+      }
+      .btn-board {
+        /* 게시판 버튼 */
+        background-color: #ffffff;
+        transition: background-color 0.3s ease;
+        border: none;
+        padding: 8px 12px; /* 버튼의 패딩값 조정 */
+        font-size: 15px; /* 버튼의 글꼴 크기 조정 */
+        font-weight: bold; /* 폰트를 굵게 설정 */
+        margin-left: -4px; /* 원하는 만큼의 왼쪽 마진 설정 */
+      }
 
-    .btn-main:hover,
-    .btn-main:active,
-    .btn-main:focus,
-    .btn-board:hover,
-    .btn-board:active,
-    .btn-board:focus {
-      background-color: #495b73;
-      color: white;
-    }
+      .btn-main:hover,
+      .btn-main:active,
+      .btn-main:focus,
+      .btn-board:hover,
+      .btn-board:active,
+      .btn-board:focus {
+        background-color: #495b73;
+        color: white;
+      }
 
-    .form-inline {
-      margin-bottom: 10px; /* 검색바와 테이블 사이 간격 조정 */
-    }
-
-  </style>
-</head>
-<body>
-
-<div class="logo-container">
-  <span class="logo-text">Space-in</span>
-</div>
-
-<div class="container">
-  <div class="nav-block">
-    <a href="#" class="btn btn-primary btn-main">메인</a>
-    <a href="#" class="btn btn-primary btn-board">게시판</a>
-  </div>
-
-  <form class="form-inline text-right">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+      .form-inline {
+        margin-bottom: 10px; /* 검색바와 테이블 사이 간격 조정 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-container">
+      <span class="logo-text">Space-in</span>
     </div>
-    <button type="submit" class="btn btn-primary" style="background-color: #495b73; border: none;">검색</button>
-  </form>
 
-  <table class="table table-hover notice-table">
-    <thead>
-    <tr>
-      <th>번호</th>
-      <th>제목</th>
-      <th>작성자</th>
-      <th>날짜</th>
-      <th>조회수</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="notice-row" style="background-color: #f8efee;">
-      <td style="color: red; font-weight: bold;">공지사항</td>
-      <td style="color: red; font-weight: bold;">스터디 메이트 게시판 이용규칙</td>
-      <td style="color: red; font-weight: bold;">관리자</td>
-      <td style="color: red; font-weight: bold;">2023.05.01</td>
-      <td style="color: red; font-weight: bold;">320</td>
-    </tr>
-    <tr class="notice-row" style="background-color: #f8efee;">
-      <td style="color: red; font-weight: bold;">공지사항</td>
-      <td style="color: red; font-weight: bold;">광고성 게시글 차단</td>
-      <td style="color: red; font-weight: bold;">관리자</td>
-      <td style="color: red; font-weight: bold;">2023.05.02</td>
-      <td style="color: red; font-weight: bold;">311</td>
-    </tr>
-    <tr>
-      <td>165</td>
-      <td>스터디 메이트 구합니다</td>
-      <td>홍길동</td>
-      <td>2023.05.05</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>164</td>
-      <td>용인 스터디룸 2명</td>
-      <td>박모씨</td>
-      <td>2023.05.10</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <td>163</td>
-      <td>강남대역 근처 스터디룸 인원 구해여</td>
-      <td>뚱이</td>
-      <td>2023.05.17</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>162</td>
-      <td>어디가 좋을까요</td>
-      <td>김뫄뫄</td>
-      <td>2023.05.20</td>
-      <td>20</td>
-    </tr>
-    </tbody>
-  </table>
+    <div class="container">
+      <div class="nav-block">
+        <a href="#" class="btn btn-primary btn-main">메인</a>
+        <a href="#" class="btn btn-primary btn-board">게시판</a>
+      </div>
 
-  <hr/>
-  <a class="btn btn-default pull-right">글쓰기</a>
+      <form class="form-inline text-right">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="검색어를 입력하세요"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          style="background-color: #495b73; border: none"
+        >
+          검색
+        </button>
+      </form>
 
-  <div class="text-center">
-    <ul class="pagination">
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#" aria-label="Next">다음</a></li>
-    </ul>
-  </div>
-</div>
+      <table class="table table-hover notice-table">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="notice-row" style="background-color: #f8efee">
+            <td style="color: red; font-weight: bold">공지사항</td>
+            <td style="color: red; font-weight: bold">
+              스터디 메이트 게시판 이용규칙
+            </td>
+            <td style="color: red; font-weight: bold">관리자</td>
+            <td style="color: red; font-weight: bold">2023.05.01</td>
+            <td style="color: red; font-weight: bold">320</td>
+          </tr>
+          <tr class="notice-row" style="background-color: #f8efee">
+            <td style="color: red; font-weight: bold">공지사항</td>
+            <td style="color: red; font-weight: bold">광고성 게시글 차단</td>
+            <td style="color: red; font-weight: bold">관리자</td>
+            <td style="color: red; font-weight: bold">2023.05.02</td>
+            <td style="color: red; font-weight: bold">311</td>
+          </tr>
+          <tr>
+            <td>165</td>
+            <td>스터디 메이트 구합니다</td>
+            <td>홍길동</td>
+            <td>2023.05.05</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>164</td>
+            <td>용인 스터디룸 2명</td>
+            <td>박모씨</td>
+            <td>2023.05.10</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>163</td>
+            <td>강남대역 근처 스터디룸 인원 구해여</td>
+            <td>뚱이</td>
+            <td>2023.05.17</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>162</td>
+            <td>어디가 좋을까요</td>
+            <td>김뫄뫄</td>
+            <td>2023.05.20</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
 
-<script src="js/jquery-3.1.1.js"></script>
-<script src="js/bootstrap.js"></script>
-</body>
+      <hr />
+      <a class="btn btn-default pull-right" href="./write.html">글쓰기</a>
+
+      <div class="text-center">
+        <ul class="pagination">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#" aria-label="Next">다음</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
 </html>
