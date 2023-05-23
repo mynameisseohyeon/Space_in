@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Space_in</title>
+    <title>My Web Page</title>
+    <style>
+      html {
+        height: 90%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    <link rel="stylesheet" href="./css/style.css" />
+      h1 {
+        height: 100px;
+        margin: 5px;
+        display: flex;
+      }
+
+      .container {
+        position: absolute;
+        top: 110px;
+        right: 300px;
+      }
+
+      .login-button {
+        padding: 10px;
+        background-color: #ccc;
+      }
+
+      .center-button {
+        height: 160px;
+        width: 160px;
+        background-color: #ccc;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <a href="./map.html">map으로 이동</a>
+    <a href="./map.html">스터디룸 검색</a>
+    <a href="./map.html">로그인</a>
+    <a href="./map.html">게시판</a>
+    <a href="./map.html">스터디메이트 찾기</a>
+    <h1>SPACE IN</h1>
+    <div class="container">
+      <button class="login-button">Log In</button>
+    </div>
+    <div class="center-button">
+      <a href="https://web.kangnam.ac.kr/">FIND STUDYROOM</a>
+    </div>
   </body>
 </html>
