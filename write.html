@@ -1,37 +1,71 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>SpaceInWYSIWYG</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Space In</title>
+    </head>
+    <style>
+        #form-commentInfo{
+    width: 100%;
+}
 
-    <script src="./summernote=lite.js"</script>
-    <script src="./summernote-ko-KR.js"</script>
-    <link rel="stylesheet" href="./summernote-lite.css">
+#comment-count{
+    margin-bottom: 10px; 
+}
 
-  </head>
-  <body>
-      <h1>SPACE - IN</h1>
-      <input type="button" name="Add" value="Add Post">
-      <input type="button" name="Can" value="Cancel">
-      <div id="summernote"></div>
-      <script>
-          $('#summernote').summernote({
-          placeholder: 'Text',
-          tabsize: 2,
-          height: 400,
-          lang:"ko-KR",
-          toolbar: [
-          ['style', ['style']],
-          ['font', ['bold', 'underline', 'clear']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['table', ['table']],
-          ['insert', ['link', 'picture', 'video']],
-          ['view', ['fullscreen', 'codeview', 'help']]
-          ]
-          });
-      </script>
-  </body>
+#comment-input{
+    width: 50%;
+    height: 3.3em;
+}
+
+#submit{
+    background-color: rgb(0, 128,255);
+    width: 5.5em;
+    height: 3.3em;;
+    font-size: 15px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#comments{
+    margin-top: 10px;
+}
+
+    </style>
+    <body>
+        <table border="1" width=55%>
+            <tr>
+                <td colspan="5" align=center>
+                    게시판
+                </td>
+            </tr>
+            <tr align=center>
+                <td width=400>Title</td>
+                <td>Writer</td>
+                <td>Date</td>
+                <td>View</td>
+            </tr>
+            <tr height=300>
+                <td colspan="5" align=center>
+                    글이 없습니다.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" align=center>
+                <button>1</button><button>2</button><button>3</button><button>4</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" align=right><input type="button" value="글쓰기"></td>
+            </tr>
+        </table>
+        <div id="form-commentInfo">
+            <div id="comment-count">댓글 (포럼형으로) <span id="count">0</span></div>
+            <input id="comment-input" placeholder="댓글을 입력해 주세요.">
+            <button id="submit">등록</button>
+        </div>
+        <div id=comments>
+    
+        </div>
+    </body>
 </html>
