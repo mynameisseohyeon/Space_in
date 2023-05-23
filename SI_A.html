@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Space In</title>
+    </head>
+    <style>
+        #form-commentInfo{
+    width: 100%;
+}
+
+#comment-count{
+    margin-bottom: 10px; 
+}
+
+#comment-input{
+    width: 50%;
+    height: 3.3em;
+}
+
+#submit{
+    background-color: rgb(0, 128,255);
+    width: 5.5em;
+    height: 3.3em;;
+    font-size: 15px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#comments{
+    margin-top: 10px;
+}
+
+    </style>
+    <body>
+        <table border="1" width=55%>
+            <tr>
+                <td colspan="5" align=center>
+                    게시판
+                </td>
+            </tr>
+            <tr align=center>
+                <td width=400>Title</td>
+                <td>Writer</td>
+                <td>Date</td>
+                <td>View</td>
+            </tr>
+            <tr height=300>
+                <td colspan="5" align=center>
+                    글이 없습니다.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" align=center>
+                <button>1</button><button>2</button><button>3</button><button>4</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" align=right><input type="button" value="글쓰기"></td>
+            </tr>
+        </table>
+        <div id="form-commentInfo">
+            <div id="comment-count">댓글 (포럼형으로) <span id="count">0</span></div>
+            <input id="comment-input" placeholder="댓글을 입력해 주세요.">
+            <button id="submit">등록</button>
+        </div>
+        <div id=comments>
+    
+        </div>
+    </body>
+</html>
