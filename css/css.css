@@ -1,2 +1,7 @@
 @import url(style2.css);
 @import url(media.css);
+
+.space_in_logo {
+  font-weight: bold;
+  font-size: 24px;
+}

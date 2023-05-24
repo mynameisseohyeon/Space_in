@@ -21,6 +21,11 @@ body {
   display: flex;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* reset */
 
 .map_search {
