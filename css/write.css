@@ -1,0 +1,25 @@
+#form-commentInfo {
+  width: 100%;
+}
+
+#comment-count {
+  margin-bottom: 10px;
+}
+
+#comment-input {
+  width: 50%;
+  height: 3.3em;
+}
+
+#submit {
+  background-color: rgb(0, 128, 255);
+  width: 5.5em;
+  height: 3.3em;
+  font-size: 15px;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+#comments {
+  margin-top: 10px;
+}
