@@ -3,11 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Space-in.iml" filepath="$PROJECT_DIR$/.idea/Space-in.iml" />
-      <module fileurl="file://$PROJECT_DIR$/authorization-server/src/main/main.iml" filepath="$PROJECT_DIR$/authorization-server/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/authorization-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/authorization-server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/simpleMap.iml" filepath="$PROJECT_DIR$/simpleMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spacein.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spacein.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/authorization-server/src/test/test.iml" filepath="$PROJECT_DIR$/authorization-server/src/test/test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spacein/src/test/test1.iml" filepath="$PROJECT_DIR$/spacein/src/test/test1.iml" />
     </modules>
   </component>
 </project>
