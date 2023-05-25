@@ -18,5 +18,6 @@ public class Client {
     private String user;
     private String scope;
     private String authorization_code;
+    private String access_token;
 }
 

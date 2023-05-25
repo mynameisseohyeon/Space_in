@@ -41,10 +41,10 @@ public class BasicController {
     public String test(){
         return "redirect:http://localhost:9000";
     }
+    //사용자 허용 후 authorization_code 받음
     @Transactional
     @GetMapping("/callback")
     public String temp(@RequestParam String authorization_code) throws UnsupportedEncodingException {
-        //authorization_code 저장 -> 어디다?
         Client findClient = clientRepository.find("spacein");
         findClient.setAuthorization_code(authorization_code);
         clientRepository.save(findClient);
@@ -53,5 +53,16 @@ public class BasicController {
                 + authorization_code + "&redirect_uri=" + encodeUri + "&client_id=spacein&client_secret=password";
                 //client_secret 나중에 암호화
         return redirect_uri;
+    }
+    @GetMapping("/callback/getToken")
+    @Transactional
+    @ResponseBody
+    public String getToken(@RequestParam String access_token){
+        Client findClient = clientRepository.find("spacein");
+        findClient.setAuthorization_code(null);
+        findClient.setAccess_token(access_token);
+        clientRepository.save(findClient);
+        return "메인페이지?access_token";
+        //데이터베이스 보면 spacein 은 user_id / password 없음 -> access token으로 authorization 서버 데이터 요청
     }
 }

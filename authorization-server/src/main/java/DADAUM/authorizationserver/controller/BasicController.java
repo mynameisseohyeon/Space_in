@@ -23,6 +23,7 @@ import java.net.http.HttpResponse;
 @Controller
 @Slf4j
 public class BasicController {
+    //525
     @Autowired
     ClientRepository clientRepository;
     @Autowired
@@ -33,7 +34,6 @@ public class BasicController {
     @ResponseBody
     @Transactional
     public String register(){
-        log.info("init......................");
         Client client = new Client();
         client.setClient_id("spacein");
         client.setClient_secret("password");
@@ -50,7 +50,6 @@ public class BasicController {
     public String user_check(Model model, @ModelAttribute MemberDTO memberDTO, @CookieValue String client_id,
                              @CookieValue String client_scope, @CookieValue String client_redirect_uri){
         log.info("********user_check****************** ");
-        //모델이 문제인데?
         model.addAttribute("client_scope", client_scope);
         model.addAttribute("user_email", memberDTO.getUser_email());
 
@@ -140,21 +139,23 @@ public class BasicController {
         return redirect_uri;
     }
     //authorization_code코드를가지고 client_secret, redirect uri client_id 값을 체크해서 일치하면 토큰 생성
-    @ResponseBody
     @GetMapping("/token")
+    @Transactional
     public String token(@RequestParam String authorization_code, @RequestParam String redirect_uri
                         ,@RequestParam String client_id, @RequestParam String client_secret){
         Client findClient = clientRepository.find(client_id);
-        log.info(redirect_uri);
         //클라이언트에게 발급한 임시 코드가 맞으면
         //authorization 코드 삭제 accesstoken 발급 저장해서 클라인트에 전달
         if (findClient.getAuthorization_code().equals(authorization_code) &&
                 findClient.getClient_secret().equals(client_secret) &&
                 findClient.getRedirect_uri().equals(redirect_uri)){
             log.info("accesstokent 발급");
-            //********************************
-            //토큰 발급 저장 로직 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            //********************************
+            findClient.setAuthorization_code(null);
+            String access_token = "access_token";
+            findClient.setAccess_token(access_token);
+            clientRepository.save(findClient);
+            redirect_uri = "redirect:" + redirect_uri + "/getToken?access_token=" + access_token;
+            return redirect_uri;
         }else{
             log.info("accesstokent 발급거부");
         }

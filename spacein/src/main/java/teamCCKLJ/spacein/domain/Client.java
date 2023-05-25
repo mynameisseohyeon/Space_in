@@ -15,9 +15,7 @@ public class Client {
     private String client_secret;
     private String redirect_uri;
 
-    //나중에 분리
-    private String user;
-    private String scope;
     private String authorization_code;
+    private String access_token;
 }
 
