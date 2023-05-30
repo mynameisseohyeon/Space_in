@@ -1,31 +1,14 @@
-drop  table if exists client;
-create table client(
-    client_id varchar(100),
-    client_secret varchar(100),
-    redirect_uri varchar(100),
-    authorization_code varchar(100),
-    access_token varchar(100),
-    user varchar(100),
-    scope varchar(100)
+mysql> CREATE TABLE IF NOT EXISTS `client_details`
+(
+    `client_id`               VARCHAR(256)  NOT NULL,
+    `resource_ids`            VARCHAR(256)  NULL,
+    `client_secret`           VARCHAR(256)  NULL,
+    `scope`                   VARCHAR(256)  NULL,
+    `authorized_grant_types`  VARCHAR(256)  NULL,
+    `redirect_uri`             VARCHAR(256)  NULL,
+    `access_token_validity`   INT           NULL,
+    `refresh_token_validity`  INT           NULL,
+    PRIMARY KEY (`client_id`)
 );
-
-drop  table if exists member;
-create table member(
-    user_email varchar(100),
-    user_name varchar(100),
-    user_password varchar(100)
-);
-
-drop  table if exists board;
-create table board(
-    board_id varchar(100),
-    board_title varchar(100),
-    board_content varchar(100)
-);
-
-drop  table if exists comment;
-create table comment(
-    comment_id varchar(100),
-    comment_content varchar(100)
-)
-
+mysql> INSERT INTO client_details (client_id, client_secret, redirect_uri)
+VALUES ("spacein", "password", "http://localhost:8080");
