@@ -16,3 +16,16 @@ create table member(
     user_password varchar(100)
 );
 
+drop  table if exists board;
+create table board(
+    board_id varchar(100),
+    board_title varchar(100),
+    board_content varchar(100)
+);
+
+drop  table if exists comment;
+create table comment(
+    comment_id varchar(100),
+    comment_content varchar(100)
+)
+
